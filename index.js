@@ -125,13 +125,7 @@ async function run(){
                 res.send(buyers);
           })
 
-          // seller add product
-          
-          // app.get('/addproducts',async(req,res)=>{
-          //   const query={};
-          //   const products = await productsCollection.find(query).toArray();
-          //   res.send(products);
-          // })
+         
 
           app.get('/category',async(req,res)=>{
             const query={};
@@ -139,13 +133,7 @@ async function run(){
             res.send(products);
           })
 
-          // app.get('/addproducts/:category_id',async(req,res)=>{
-          //   const id = req.params.category_id;
-          //   const query = {category_id:id};
-          //   console.log(id,query)
-          //   const result = await productsCollection.find(query).toArray();
-          //   res.send(result);
-          // })
+          
           app.get('/category/:category_id',async(req,res)=>{
             const id = req.params.category_id;
             const query = {category_id:id};
@@ -189,17 +177,6 @@ async function run(){
             res.send(result);
         })
 
-          // app.put('/buyers/:email',async(req,res)=>{
-          //   const email = req.params.email;
-          //   const user = req.body;
-          //   const filter = {email:email};
-          //   const options = {upsert:true};
-          //   const updateDoc = {
-          //     $set:Buyer,
-          //   }
-          //   const result = await buyersCollection.updateOne(filter,updateDoc,options);
-          //   res.send(updateDoc);
-          // })
         
           
           app.post('/buyers',async(req,res)=>{
